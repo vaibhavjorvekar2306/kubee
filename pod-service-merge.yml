@@ -1,0 +1,32 @@
+#pod-file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxpod
+  namespace: nscreation
+  labels:
+    app: mergeapp
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+#service-file
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginxservice
+  namespace: nscreation
+spec:
+  selector:
+    app:  mergeapp
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+
+
