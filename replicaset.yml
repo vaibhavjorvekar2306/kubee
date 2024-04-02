@@ -1,1 +1,24 @@
+apiVersion: apps/v1
+kind:  ReplicaSet
+metadata: 
+  name: vaibhav
+  labels:
+    app: vaibhav-J
+spec:
+    selector: 
+      matchExpressions:      
+         -  { key: app, operator: In , values: [vaibhav-J,  new-app]}
+    replicas: 2
+    template:
+      metadata:
+        labels:
+          name: nginxapp
+          app: vaibhav-J
+      spec:
+        containers:
+          - name: nginxapp
+            image: nginx:latest 
+            ports:
+                - containerPort: 80
+                  protocol: TCP
 
