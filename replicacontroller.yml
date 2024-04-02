@@ -11,11 +11,11 @@ spec:
     template:   
       metadata:
         labels:
-          name: nginxapp
-          app: rpcapp
+          name: vaibhs
+          app: vaibhs
       spec:
         containers:
-          - name: nginxapp
+          - name: vaibhs
             image: nginx:latest 
             ports:
                 - containerPort: 80
