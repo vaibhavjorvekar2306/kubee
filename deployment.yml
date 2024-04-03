@@ -16,7 +16,7 @@ spec:
          #   -  { key: app, operator: Exists}
       matchLabels: 
           app: vaibhav
-    replicas: 6
+    replicas: 5
     template:
       metadata:
         labels:
