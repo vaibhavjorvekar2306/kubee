@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind:  StatefulSet
 metadata: 
-  name: VJ
+  name: vj
   labels:
-    app: depapp
+    app: vaibhs
 spec:
     selector: 
       matchLabels: 
-          app: depapp
+          app: vaibhs
     replicas: 4
     template:
       metadata:
         labels:
-          name: mdb
-          app: depapp
+          name: vj
+          app: vaibhs
       spec:
         containers:
           - name: mysql
