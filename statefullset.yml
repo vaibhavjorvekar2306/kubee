@@ -3,17 +3,17 @@ kind:  StatefulSet
 metadata: 
   name: VJ
   labels:
-    app: vaibhs
+    app: depapp
 spec:
     selector: 
       matchLabels: 
-          app: VJ
-    replicas: 6
+          app: depapp
+    replicas: 4
     template:
       metadata:
         labels:
-          name: VJ
-          app: vaibhs
+          name: mdb
+          app: depapp
       spec:
         containers:
           - name: mysql
