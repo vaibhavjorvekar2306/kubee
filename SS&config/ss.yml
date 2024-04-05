@@ -1,16 +1,14 @@
-
-
 apiVersion: apps/v1
 kind:  StatefulSet
 metadata: 
-  name: statefull
+  name: vj-statefull
   labels:
-    app: depapp
+    app: vaibhs
 spec:
     selector: 
       matchLabels: 
           app: depapp
-    replicas: 4
+    replicas: 6
     template:
       metadata:
         labels:
