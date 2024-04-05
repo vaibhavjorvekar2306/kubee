@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata: 
     name: config
 data: 
-    rootpw: "1234"
+    rootpw: "2306"
